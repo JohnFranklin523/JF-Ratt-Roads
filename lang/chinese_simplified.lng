@@ -1,0 +1,153 @@
+##grflangid 0x56
+
+#Above is the Chinese (Simplified) id
+
+STR_GRF_NAME             :JFRattRoads 版本1.0.1
+STR_GRF_DESC             :{}2023年2月3日: 版本1.0发布! 与之前版本不兼容. 2023年2月1日: 修改参数, 修改路名, 增加中文翻译. 2022年12月4日: 限速增加 "m/s" 选项. by John Franklin. 2021年6月8日: 澳洲/欧洲/北美洲的柏油/沥青公路, 部分带有可积雪的栅栏. {}{YELLOW}适用版本: OpenTTD 1.10 或更新. {}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG 与 Andrew350 {ORANGE}{}受GPLv2版权条例保护
+STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
+STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
+
+STR_PARAM_1_NAME               :道路种类可用时段
+STR_PARAM_1_DESC               :此变量更改道路种类在时间条件下的可用性. {ORANGE}某一时刻后可用{BLACK} 为默认设置, 一些道路在其推出日期前不可用; 而 {ORANGE}所有时段可用{BLACK} 使得所有道路种类在所有时段可用.
+STR_PARAM_INTRO_YEAR_DEF       :某一时刻后可用 {SILVER}(默认)
+STR_PARAM_INTRO_YEAR_REMOVE    :所有时段可用
+
+STR_PARAM_2_NAME               :速度单位
+STR_PARAM_2_DESC               :选择合适的速度单位, {ORANGE}推荐与游戏设置一致{BLACK}, 以免经过单位转换后出现诸如 57 km/h 一类奇怪的速度限制.
+STR_PARAM_UNITS_MPH            :英里/小时
+STR_PARAM_UNITS_KMH            :千米/小时
+STR_PARAM_UNITS_MS             :米/秒 {SILVER}(默认)
+
+
+STR_PARAM_3_NAME               :速度限制
+STR_PARAM_3_DESC               :此变量调整速度限制. {}{ORANGE}正常{BLACK} 为默认速度限制.{}{ORANGE}不限速{BLACK} 逮虾户!
+STR_PARAM_DIFFICULTY_DEF       :正常 {SILVER}(默认)
+STR_PARAM_DIFFICULTY_NONE      :不限速
+
+STR_PARAM_4_NAME               :道路风格
+STR_PARAM_4_DESC               :此变量更改游戏内道路风格. 目前有两种选择: {ORANGE}欧式/澳式{BLACK} 与 {ORANGE}美式.
+STR_PARAM_ROAD_STYLE_1         :欧式/澳式 {SILVER}(默认)
+STR_PARAM_ROAD_STYLE_2         :美式
+
+STR_PARAM_5_NAME               :允许电气化道路
+STR_PARAM_5_DESC               :若允许, 该变量增加若干电气化道路类型, 以允许无轨电车运行. 这些道路类型需要支持NRT (NotRoadTypes) 的车辆以变得有用, 因此该变量默认设置为不允许.
+
+STR_PARAM_6_NAME               :允许房屋生成于标有 "禁止房屋生成" 的道路旁
+STR_PARAM_6_DESC               :房屋默认禁止生成在这些道路旁, 包括小径/沙路/一级公路/驰道/高速公路/工业道路; 激活该选项允许房屋生成于这些道路旁.{}{} {ORANGE}推荐在多人服务器中使用以避免粗心或有恶意的玩家摧毁城市.{BLACK}
+
+STR_GENERIC_BUILD_VEHICLE            :购买汽车
+STR_GENERIC_AUTOREPLACE              :汽车
+STR_GENERIC_NEW_ENGINE               :汽车
+
+STR_sand_tracks2_NAME	    	:农田小径 (禁止房屋生成)
+STR_sand_tracks2_TOOLBAR        :农田小径 (禁止房屋生成)
+STR_sand_tracks2_MENU           :农田小径 (禁止房屋生成)
+
+STR_sand_tracks_NAME	     	:泥土小径 (禁止房屋生成)
+STR_sand_tracks_TOOLBAR         :泥土小径 (禁止房屋生成)
+STR_sand_tracks_MENU            :泥土小径 (禁止房屋生成)
+
+STR_sand_ROAD_NAME	     	    :土路
+STR_sand_ROAD_TOOLBAR	     	:土路
+STR_sand_ROAD_MENU	     	    :土路
+
+STR_sand_ROAD_ELECTRIFIED_NAME          :电气化土路
+STR_sand_ROAD_ELECTRIFIED_TOOLBAR       :电气化土路
+STR_sand_ROAD_ELECTRIFIED_MENU          :电气化土路
+
+STR_beach_ROAD_NAME    		    :沙路 (禁止房屋生成）
+STR_beach_ROAD_TOOLBAR	     	:沙路 (禁止房屋生成)
+STR_beach_ROAD_MENU	     		:沙路 (禁止房屋生成)
+
+STR_cobble_ROAD_NAME	     	:鹅卵石路
+STR_cobble_ROAD_TOOLBAR	     	:鹅卵石路
+STR_cobble_ROAD_MENU	     	:鹅卵石路
+
+STR_cobble_road_ELECTRIFIED_ROAD_NAME     	 :电气化鹅卵石路
+STR_cobble_road_ELECTRIFIED_ROAD_TOOLBAR  	 :电气化鹅卵石路
+STR_cobble_road_ELECTRIFIED_ROAD_MENU    	 :电气化鹅卵石路
+
+STR_clickclack_ROAD_NAME	:驰道 (禁止房屋生成)
+STR_clickclack_ROAD_TOOLBAR	:驰道 (禁止房屋生成)
+STR_clickclack_ROAD_MENU	:驰道 (禁止房屋生成)
+
+STR_BASIC_ASPHALT_ROAD_NAME          :三级公路
+STR_BASIC_ASPHALT_ROAD_TOOLBAR       :三级公路
+STR_BASIC_ASPHALT_ROAD_MENU          :三级公路
+
+STR_IMPROVED_ASPHALT_ROAD_NAME       :城镇道路
+STR_IMPROVED_ASPHALT_ROAD_TOOLBAR    :城镇道路
+STR_IMPROVED_ASPHALT_ROAD_MENU       :城镇道路
+
+STR_MODERN_ASPHALT_ROAD_NAME         :二级公路
+STR_MODERN_ASPHALT_ROAD_TOOLBAR      :二级公路
+STR_MODERN_ASPHALT_ROAD_MENU         :二级公路
+
+STR_modern_concrete_ROAD_NAME         :一级公路 (禁止房屋生成)
+STR_modern_concrete_ROAD_TOOLBAR      :一级公路 (禁止房屋生成)
+STR_modern_concrete_ROAD_MENU         :一级公路 (禁止房屋生成)
+
+STR_HIGHWAY_ROAD_NAME                :高速公路 (禁止房屋生成)
+STR_HIGHWAY_ROAD_TOOLBAR             :高速公路 (禁止房屋生成)
+STR_HIGHWAY_ROAD_MENU                :高速公路 (禁止房屋生成)
+
+STR_HIGHWAY2_ROAD_NAME                :不限速高速公路 (禁止房屋生成)
+STR_HIGHWAY2_ROAD_TOOLBAR             :不限速高速公路 (禁止房屋生成)
+STR_HIGHWAY2_ROAD_MENU                :不限速高速公路 (禁止房屋生成)
+
+STR_cobble_stone_ELECTRIFIED_ROAD_NAME          :电气化鹅卵石路
+STR_cobble_stone_ELECTRIFIED_ROAD_TOOLBAR       :电气化鹅卵石路
+STR_cobble_stone_ELECTRIFIED_ROAD_MENU          :电气化鹅卵石路
+
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :电气化三级公路
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :电气化三级公路
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU       	 :电气化三级公路
+
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :电气化城镇道路
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :电气化城镇道路
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :电气化城镇道路
+
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :电气化二级公路
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :电气化二级公路
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :电气化二级公路
+
+STR_modern_concrete_ROAD_ELECTRIFIED_NAME     	 :电气化一级公路 (禁止房屋生成)
+STR_modern_concrete_ROAD_ELECTRIFIED_TOOLBAR  	 :电气化一级公路 (禁止房屋生成)
+STR_modern_concrete_ROAD_ELECTRIFIED_MENU    	 :电气化一级公路 (禁止房屋生成)
+
+STR_ConcreteRoad_ROAD_NAME	:三级工业道路 (禁止房屋生成)
+STR_ConcreteRoad_ROAD_TOOLBAR	:三级工业道路 (禁止房屋生成)
+STR_ConcreteRoad_ROAD_MENU	:三级工业道路 (禁止房屋生成)
+
+STR_AUZY_ROAD_NAME                :二级工业道路 (禁止房屋生成)
+STR_AUZY_ROAD_TOOLBAR             :二级工业道路 (禁止房屋生成)
+STR_AUZY_ROAD_MENU                :二级工业道路 (禁止房屋生成)
+
+STR_ISR1_ROAD_NAME                :一级工业道路 (禁止房屋生成)
+STR_ISR1_ROAD_TOOLBAR             :一级工业道路 (禁止房屋生成)
+STR_ISR1_ROAD_MENU                :一级工业道路 (禁止房屋生成)
+
+STR_ConcreteRoad_ROAD_ELECTRIFIED_NAME	:电气化三级工业道路 (禁止房屋生成)
+STR_ConcreteRoad_ROAD_ELECTRIFIED_TOOLBAR	:电气化三级工业道路 (禁止房屋生成)
+STR_ConcreteRoad_ROAD_ELECTRIFIED_MENU	:电气化三级工业道路 (禁止房屋生成)
+
+STR_AUZY_ROAD_ELECTRIFIED_NAME	:电气化二级工业道路 (禁止房屋生成)
+STR_AUZY_ROAD_ELECTRIFIED_TOOLBAR	:电气化二级工业道路 (禁止房屋生成)
+STR_AUZY_ROAD_ELECTRIFIED_MENU	:电气化二级工业道路 (禁止房屋生成)
+
+STR_ISR1_ROAD_ELECTRIFIED_NAME	:电气化一级工业道路 (禁止房屋生成)
+STR_ISR1_ROAD_ELECTRIFIED_TOOLBAR	:电气化一级工业道路 (禁止房屋生成)
+STR_ISR1_ROAD_ELECTRIFIED_MENU	:电气化一级工业道路 (禁止房屋生成)
+
+
+STR_TRAM_BUILD_VEHICLE             :购买电车
+STR_TRAM_AUTOREPLACE               :电车
+STR_TRAM_NEW_ENGINE                :电车
+
+STR_TRAM_TRACK_NAME                :非电气化电车轨道
+STR_TRAM_TRACK_TOOLBAR             :非电气化电车轨道
+STR_TRAM_TRACK_MENU                :非电气化电车轨道
+
+STR_ELECTRIC_TRAM_TRACK_NAME       :电气化电车轨道
+STR_ELECTRIC_TRAM_TRACK_TOOLBAR    :电气化电车轨道
+STR_ELECTRIC_TRAM_TRACK_MENU       :电气化电车轨道

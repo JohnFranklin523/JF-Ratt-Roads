@@ -1,0 +1,153 @@
+##grflangid 0x00
+
+#Above is the English US id
+
+STR_GRF_NAME             :JFRattRoads 1.0.1
+STR_GRF_DESC             :{}3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
+STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
+
+STR_PARAM_1_NAME               :Roadtype Availability
+STR_PARAM_1_DESC               :This parameter changes the availability of roadtypes based on date. {ORANGE}Year-Dependent{BLACK} is default behavior where each roadtype is introduced only after certain years, while {ORANGE}Always Available{BLACK} makes all roadtypes, well, always available
+STR_PARAM_INTRO_YEAR_DEF       :Year-Dependent {SILVER}(Default)
+STR_PARAM_INTRO_YEAR_REMOVE    :Always Available
+
+STR_PARAM_2_NAME               :Speed Units
+STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions
+STR_PARAM_UNITS_MPH            :MPH
+STR_PARAM_UNITS_KMH            :KM/H
+STR_PARAM_UNITS_MS             :M/S {SILVER}(Default)
+
+
+STR_PARAM_3_NAME               :Speed Limits
+STR_PARAM_3_DESC               :This parameter adjusts speed limits. {}{ORANGE}Normal{BLACK} is default speeds{}{ORANGE}No Speed Limits{BLACK} Pedal to the metal!
+STR_PARAM_DIFFICULTY_DEF       :Normal {SILVER}(Default)
+STR_PARAM_DIFFICULTY_NONE      :No Speed Limits
+
+STR_PARAM_4_NAME               :Road Style
+STR_PARAM_4_DESC               :This parameter allows you to adjust which road style appears in-game. Currently there are two options: {ORANGE}Australia/Europe{BLACK} and {ORANGE}American
+STR_PARAM_ROAD_STYLE_1         :Australian/Europe {SILVER}(Default)
+STR_PARAM_ROAD_STYLE_2         :American
+
+STR_PARAM_5_NAME               :Enable electrified roads
+STR_PARAM_5_DESC               :If enabled, this option adds electrified versions of 4 roadtypes for use with trolleybuses and other catenary-powered road vehicles. These roadtypes require the addition of NRT-enabled vehicle sets to be useful, hence why they are disabled by default.
+
+STR_PARAM_6_NAME               :Enable houses along roads with "No Houses" sign
+STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside these roads, including Tracks, A-Level, Chidao, Highway, Autobahn and all roads originated from Part 3 (Industrial Roads, Single Lanes); activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
+
+STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
+STR_GENERIC_AUTOREPLACE              :Road Vehicles
+STR_GENERIC_NEW_ENGINE               :road
+
+STR_sand_tracks2_NAME	    	:Farm Tracks (No Houses)
+STR_sand_tracks2_TOOLBAR        :Farm Tracks (No Houses)
+STR_sand_tracks2_MENU           :Farm Tracks (No Houses)
+
+STR_sand_tracks_NAME	     	:Dirt Tracks (No Houses)
+STR_sand_tracks_TOOLBAR         :Dirt Tracks (No Houses)
+STR_sand_tracks_MENU            :Dirt Tracks (No Houses)
+
+STR_sand_ROAD_NAME	     	    :Dirt Road
+STR_sand_ROAD_TOOLBAR	     	:Dirt Road
+STR_sand_ROAD_MENU	     	    :Dirt Road
+
+STR_sand_ROAD_ELECTRIFIED_NAME          :Electrified Dirt Road
+STR_sand_ROAD_ELECTRIFIED_TOOLBAR       :Electrified Dirt Road
+STR_sand_ROAD_ELECTRIFIED_MENU          :Electrified Dirt Road
+
+STR_beach_ROAD_NAME    		    :Sandy Road (No Houses)
+STR_beach_ROAD_TOOLBAR	     	:Sandy Road (No Houses)
+STR_beach_ROAD_MENU	     		:Sandy Road (No Houses)
+
+STR_cobble_ROAD_NAME	     	:Cobble Stone Road
+STR_cobble_ROAD_TOOLBAR	     	:Cobble Stone Road
+STR_cobble_ROAD_MENU	     	:Cobble Stone Road
+
+STR_cobble_road_ELECTRIFIED_ROAD_NAME     	 :Electrified Cobble Stone Road
+STR_cobble_road_ELECTRIFIED_ROAD_TOOLBAR  	 :Electrified Cobble Stone Road
+STR_cobble_road_ELECTRIFIED_ROAD_MENU    	 :Electrified Cobble Stone Road
+
+STR_clickclack_ROAD_NAME	:Chidao (No Houses)
+STR_clickclack_ROAD_TOOLBAR	:Chidao (No Houses)
+STR_clickclack_ROAD_MENU	:Chidao (No Houses)
+
+STR_BASIC_ASPHALT_ROAD_NAME          :C-Level Road
+STR_BASIC_ASPHALT_ROAD_TOOLBAR       :C-Level Road
+STR_BASIC_ASPHALT_ROAD_MENU          :C-Level Road
+
+STR_IMPROVED_ASPHALT_ROAD_NAME       :Town Road
+STR_IMPROVED_ASPHALT_ROAD_TOOLBAR    :Town Road
+STR_IMPROVED_ASPHALT_ROAD_MENU       :Town Road
+
+STR_MODERN_ASPHALT_ROAD_NAME         :B-Level Road
+STR_MODERN_ASPHALT_ROAD_TOOLBAR      :B-Level Road
+STR_MODERN_ASPHALT_ROAD_MENU         :B-Level Road
+
+STR_modern_concrete_ROAD_NAME         :A-Level Road (No Houses)
+STR_modern_concrete_ROAD_TOOLBAR      :A-Level Road (No Houses)
+STR_modern_concrete_ROAD_MENU         :A-Level Road (No Houses)
+
+STR_HIGHWAY_ROAD_NAME                :Highway (No Houses)
+STR_HIGHWAY_ROAD_TOOLBAR             :Highway (No Houses)
+STR_HIGHWAY_ROAD_MENU                :Highway (No Houses)
+
+STR_HIGHWAY2_ROAD_NAME                :Autobahn (No Houses)
+STR_HIGHWAY2_ROAD_TOOLBAR             :Autobahn (No Houses)
+STR_HIGHWAY2_ROAD_MENU                :Autobahn (No Houses)
+
+STR_cobble_stone_ELECTRIFIED_ROAD_NAME          :Electrified Cobble Stone Road
+STR_cobble_stone_ELECTRIFIED_ROAD_TOOLBAR       :Electrified Cobble Stone Road
+STR_cobble_stone_ELECTRIFIED_ROAD_MENU          :Electrified Cobble Stone Road
+
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified C-Level Road
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified C-Level Road
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU       	 :Electrified C-Level Road
+
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Town Road
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Town Road
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Town Road
+
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified B-Level Road
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified B-Level Road
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified B-Level Road
+
+STR_modern_concrete_ROAD_ELECTRIFIED_NAME     	 :Electrified A-Level Road (No Houses)
+STR_modern_concrete_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified A-Level Road (No Houses)
+STR_modern_concrete_ROAD_ELECTRIFIED_MENU    	 :Electrified A-Level Road (No Houses)
+
+STR_ConcreteRoad_ROAD_NAME  	:Industrial C-Level Road (No Houses)
+STR_ConcreteRoad_ROAD_TOOLBAR	:Industrial C-Level Road (No Houses)
+STR_ConcreteRoad_ROAD_MENU	    :Industrial C-Level Road (No Houses)
+
+STR_AUZY_ROAD_NAME                :Industrial B-Level Road (No Houses)
+STR_AUZY_ROAD_TOOLBAR             :Industrial B-Level Road (No Houses)
+STR_AUZY_ROAD_MENU                :Industrial B-Level Road (No Houses)
+
+STR_ISR1_ROAD_NAME                :Industrial A-Level Road (No Houses)
+STR_ISR1_ROAD_TOOLBAR             :Industrial A-Level Road (No Houses)
+STR_ISR1_ROAD_MENU                :Industrial A-Level Road (No Houses)
+
+STR_ConcreteRoad_ROAD_ELECTRIFIED_NAME	    :Electric Industrial C-Level Road (No Houses)
+STR_ConcreteRoad_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial C-Level Road (No Houses)
+STR_ConcreteRoad_ROAD_ELECTRIFIED_MENU	    :Electric Industrial C-Level Road (No Houses)
+
+STR_AUZY_ROAD_ELECTRIFIED_NAME	    :Electric Industrial B-Level Road (No Houses)
+STR_AUZY_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial B-Level Road (No Houses)
+STR_AUZY_ROAD_ELECTRIFIED_MENU	    :Electric Industrial B-Level Road (No Houses)
+
+STR_ISR1_ROAD_ELECTRIFIED_NAME	    :Electric Industrial A-Level Road (No Houses)
+STR_ISR1_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial A-Level Road (No Houses)
+STR_ISR1_ROAD_ELECTRIFIED_MENU	    :Electric Industrial A-Level Road (No Houses)
+
+
+STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
+STR_TRAM_AUTOREPLACE               :Tram Vehicles
+STR_TRAM_NEW_ENGINE                :tram
+
+STR_TRAM_TRACK_NAME                :Tramway
+STR_TRAM_TRACK_TOOLBAR             :Tramway Construction
+STR_TRAM_TRACK_MENU                :Tramway construction
+
+STR_ELECTRIC_TRAM_TRACK_NAME       :Electric Tramway
+STR_ELECTRIC_TRAM_TRACK_TOOLBAR    :Electric Tramway Construction
+STR_ELECTRIC_TRAM_TRACK_MENU       :Electric Tramway construction
