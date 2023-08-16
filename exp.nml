@@ -10,9 +10,9 @@ grf {
 		name: string(STR_GRF_NAME);
 		desc: string(STR_GRF_DESC);
 		url: string(STR_GRF_URL);
-		version: 5;
+		version: 6;
 		min_compatible_version: 3;
-		param {
+		param 1 {
 			param_intro_year {
 				type:      int;
 				name:      string(STR_PARAM_1_NAME);
@@ -26,22 +26,23 @@ grf {
 				};
 			}
 		}
-		param {
+		param 2 {
 			param_speed_units {
 				type:      int;
 				name:      string(STR_PARAM_2_NAME);
 				desc:      string(STR_PARAM_2_DESC);
 				min_value: 0;
-				max_value: 2;
+				max_value: 3;
 				def_value: 2;
 				names: {
 					0: string(STR_PARAM_UNITS_MPH);
 					1: string(STR_PARAM_UNITS_KMH);
                     2: string(STR_PARAM_UNITS_MS);
+					3: string(STR_PARAM_UNITS_KMH_CUSTOM);
 				};
 			}
 		}
-		param {
+		param 3 {
 			param_difficulty {
 				type:      int;
 				name:      string(STR_PARAM_3_NAME);
@@ -55,7 +56,7 @@ grf {
 				};
 			}
 		}
-		param {
+		param 4 {
 			param_road_style {
 				type:      int;
 				name:      string(STR_PARAM_4_NAME);
@@ -69,20 +70,122 @@ grf {
 				};
 			}
 		}
-
-		param {
+		param 5 {
 			param_electric_roads {
 				type:      bool;
 				name:      string(STR_PARAM_5_NAME);
 				desc:      string(STR_PARAM_5_DESC);
 			}
 		}
-
-		param {
+		param 6 {
 			param_houses {
 				type:      bool;
 				name:      string(STR_PARAM_6_NAME);
 				desc:      string(STR_PARAM_6_DESC);
+			}
+		}
+		param 7 {
+			param_farm {
+				type:		int;
+				name:		string(STR_PARAM_7_NAME);
+				desc:		string(STR_PARAM_7_DESC);
+				min_value: 0;
+				max_value: 127;
+				def_value: 30;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 8 {
+			param_dirt {
+				type:		int;
+				name:		string(STR_PARAM_8_NAME);
+				desc:		string(STR_PARAM_8_DESC);
+				min_value: 0;
+				max_value: 127;
+				def_value: 40;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 9 {
+			param_town {
+				type:		int;
+				name:		string(STR_PARAM_9_NAME);
+				desc:		string(STR_PARAM_9_DESC);
+				min_value: 0;
+				max_value: 255;
+				def_value: 50;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 10 {
+			param_clevel {
+				type:		int;
+				name:		string(STR_PARAM_10_NAME);
+				desc:		string(STR_PARAM_10_DESC);
+				min_value: 0;
+				max_value: 255;
+				def_value: 50;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 11 {
+			param_blevel {
+				type:		int;
+				name:		string(STR_PARAM_11_NAME);
+				desc:		string(STR_PARAM_11_DESC);
+				min_value: 0;
+				max_value: 255;
+				def_value: 70;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 12 {
+			param_alevel {
+				type:		int;
+				name:		string(STR_PARAM_12_NAME);
+				desc:		string(STR_PARAM_12_DESC);
+				min_value: 0;
+				max_value: 255;
+				def_value: 90;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 13 {
+			param_highway {
+				type:		int;
+				name:		string(STR_PARAM_13_NAME);
+				desc:		string(STR_PARAM_13_DESC);
+				min_value: 0;
+				max_value: 511;
+				def_value: 120;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 14 {
+			param_autobahn {
+				type:		int;
+				name:		string(STR_PARAM_14_NAME);
+				desc:		string(STR_PARAM_14_DESC);
+				min_value: 0;
+				max_value: 511;
+				def_value: 0;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
 			}
 		}
 	}
@@ -419,7 +522,13 @@ item(FEAT_ROADTYPES, item_sand_tracks2, 01) {
 	}
 }
 }
-
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_sand_tracks2, 01) {
+	property {	
+		speed_limit:                 param_farm km/h;
+	}
+}
+}
 
 }
 
@@ -555,6 +664,13 @@ item(FEAT_ROADTYPES, item_sand_tracks, 02) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_sand_tracks, 02) {
+	property {	
+		speed_limit:                 param_dirt km/h;
+	}
+}
+}
 
 }
 
@@ -676,6 +792,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_sand_road, 03) {
 	property {		
 		speed_limit:                 10 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_sand_road, 03) {
+	property {	
+		speed_limit:                 param_dirt km/h;
 	}
 }
 }
@@ -803,6 +926,13 @@ item(FEAT_ROADTYPES, item_beach_road, 05) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_beach_road, 05) {
+	property {	
+		speed_limit:                 param_blevel km/h;
+	}
+}
+}
 
 }
 
@@ -925,6 +1055,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_cobble_road, 06) {
 	property {		
 		speed_limit:                 10 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_cobble_road, 06) {
+	property {	
+		speed_limit:                 param_dirt km/h;
 	}
 }
 }
@@ -1082,7 +1219,7 @@ item(FEAT_ROADTYPES, item_clickclack_road, 08) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_clickclack_road, 08) {
 	property {	
-		speed_limit:                 71 km/h;
+		speed_limit:                 70 km/h;
 	}
 }
 }
@@ -1090,6 +1227,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_clickclack_road, 08) {
 	property {	
 		speed_limit:                 20 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_clickclarkroad, 08) {
+	property {	
+		speed_limit:                 param_blevel km/h;
 	}
 }
 }
@@ -1206,7 +1350,7 @@ item(FEAT_ROADTYPES, item_basic_asphalt_road, 09) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_basic_asphalt_road, 09) {
 	property {		
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -1214,6 +1358,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_basic_asphalt_road, 09) {
 	property {		
 		speed_limit:                 15 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_basic_asphalt_road, 09) {
+	property {	
+		speed_limit:                 param_clevel km/h;
 	}
 }
 }
@@ -1387,7 +1538,7 @@ item(FEAT_ROADTYPES, item_improved_asphalt_road, 11) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_improved_asphalt_road, 11) {
 	property {	
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -1395,6 +1546,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_improved_asphalt_road, 11) {
 	property {	
 		speed_limit:                 15 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_improved_asphalt_road, 11) {
+	property {	
+		speed_limit:                 param_town km/h;
 	}
 }
 }
@@ -1550,7 +1708,7 @@ item(FEAT_ROADTYPES, item_modern_asphalt_road, 13) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_modern_asphalt_road, 13) {
 	property {	
-		speed_limit:                 71 km/h;
+		speed_limit:                 70 km/h;
 	}
 }
 }
@@ -1558,6 +1716,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_modern_asphalt_road, 13) {
 	property {	
 		speed_limit:                 20 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_modern_asphalt_road, 13) {
+	property {	
+		speed_limit:                 param_blevel km/h;
 	}
 }
 }
@@ -1712,7 +1877,7 @@ item(FEAT_ROADTYPES, item_modern_concrete_road, 15) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_modern_concrete_road, 15) {
 	property {	
-		speed_limit:                 91 km/h;
+		speed_limit:                 90 km/h;
 	}
 }
 }
@@ -1720,6 +1885,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_modern_concrete_road, 15) {
 	property {	
 		speed_limit:                 25 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_modern_concrete_road, 15) {
+	property {	
+		speed_limit:                 param_alevel km/h;
 	}
 }
 }
@@ -1876,7 +2048,7 @@ item(FEAT_ROADTYPES, item_highway_road, 17) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_highway_road, 17) {
 	property {	
-		speed_limit:                 121 km/h;
+		speed_limit:                 120 km/h;
 	}
 }
 }
@@ -1884,6 +2056,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_highway_road, 17) {
 	property {	
 		speed_limit:                 35 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_highway_road, 17) {
+	property {	
+		speed_limit:                 param_highway km/h;
 	}
 }
 }
@@ -2050,6 +2229,13 @@ item(FEAT_ROADTYPES, item_highway2_road, 18) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_highway2_road, 18) {
+	property {	
+		speed_limit:                 param_autobahn km/h;
+	}
+}
+}
 
 }
 
@@ -2161,7 +2347,7 @@ item(FEAT_ROADTYPES, item_ConcreteRoad_road, 19) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_ConcreteRoad_road, 19) {
 	property {		
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -2172,6 +2358,14 @@ item(FEAT_ROADTYPES, item_ConcreteRoad_road, 19) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_ConcreteRoad_road, 19) {
+	property {	
+		speed_limit:                 param_clevel km/h;
+	}
+}
+}
+
 }
 
 
@@ -2285,7 +2479,7 @@ item(FEAT_ROADTYPES, item_AUZY_road, 21) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_AUZY_road, 21) {
 	property {		
-		speed_limit:                 71 km/h;
+		speed_limit:                 70 km/h;
 	}
 }
 }
@@ -2293,6 +2487,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_AUZY_road, 21) {
 	property {		
 		speed_limit:                 20 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_AUZY_road, 21) {
+	property {	
+		speed_limit:                 param_blevel km/h;
 	}
 }
 }
@@ -2411,7 +2612,7 @@ item(FEAT_ROADTYPES, item_ISR1_road, 23) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_ISR1_road, 23) {
 	property {		
-		speed_limit:                 91 km/h;
+		speed_limit:                 90 km/h;
 	}
 }
 }
@@ -2422,6 +2623,14 @@ item(FEAT_ROADTYPES, item_ISR1_road, 23) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_ISR1_road, 23) {
+	property {	
+		speed_limit:                 param_alevel km/h;
+	}
+}
+}
+
 }
 
 
@@ -2536,6 +2745,13 @@ item(FEAT_ROADTYPES, item_cobble_road_electric, 07) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_cobble_road_electric, 07) {
+	property {	
+		speed_limit:                 param_dirt km/h;
+	}
+}
+}
 
 }
 
@@ -2608,6 +2824,13 @@ item(FEAT_ROADTYPES, item_sand_road_electrified, 04) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_sand_road_electrified, 04) {
+	property {	
+		speed_limit:                 param_dirt km/h;
+	}
+}
+}
 
 }
 
@@ -2670,7 +2893,7 @@ item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 10) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 10) {
 	property {		
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -2678,6 +2901,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 10) {
 	property {		
 		speed_limit:                 15 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 10) {
+	property {	
+		speed_limit:                 param_clevel km/h;
 	}
 }
 }
@@ -2739,7 +2969,7 @@ item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 12) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 12) {
 	property {	
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -2747,6 +2977,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 12) {
 	property {	
 		speed_limit:                 15 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 12) {
+	property {	
+		speed_limit:                 param_town km/h;
 	}
 }
 }
@@ -2808,7 +3045,7 @@ item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 14) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 14) {
 	property {	
-		speed_limit:                 71 km/h;
+		speed_limit:                 70 km/h;
 	}
 }
 }
@@ -2816,6 +3053,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 14) {
 	property {	
 		speed_limit:                 20 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 14) {
+	property {	
+		speed_limit:                 param_blevel km/h;
 	}
 }
 }
@@ -2878,13 +3122,20 @@ item(FEAT_ROADTYPES, item_modern_concrete_road_electrified, 16) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_modern_concrete_road_electrified, 16) {
 	property {	
-		speed_limit:                 91 km/h;
+		speed_limit:                 90 km/h;
 	}
 }
 }if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_modern_concrete_road_electrified, 16) {
 	property {	
 		speed_limit:                 25 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_modern_concrete_road_electrified, 16) {
+	property {	
+		speed_limit:                 param_alevel km/h;
 	}
 }
 }
@@ -2947,7 +3198,7 @@ item(FEAT_ROADTYPES, item_ConcreteRoad_road_electrified, 20) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_ConcreteRoad_road_electrified, 20) {
 	property {		
-		speed_limit:                 51 km/h;
+		speed_limit:                 50 km/h;
 	}
 }
 }
@@ -2958,6 +3209,14 @@ item(FEAT_ROADTYPES, item_ConcreteRoad_road_electrified, 20) {
 	}
 }
 }
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_ConcreteRoad_road_electrified, 20) {
+	property {	
+		speed_limit:                 param_clevel km/h;
+	}
+}
+}
+
 }
 
 
@@ -3015,7 +3274,7 @@ item(FEAT_ROADTYPES, item_AUZY_road_electrified, 22) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_AUZY_road_electrified, 22) {
 	property {		
-		speed_limit:                 71 km/h;
+		speed_limit:                 70 km/h;
 	}
 }
 }
@@ -3023,6 +3282,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_AUZY_road_electrified, 22) {
 	property {		
 		speed_limit:                 20 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_AUZY_road_electrified, 22) {
+	property {	
+		speed_limit:                 param_blevel km/h;
 	}
 }
 }
@@ -3086,7 +3352,7 @@ item(FEAT_ROADTYPES, item_ISR1_road_electrified, 24) {
 if (param_speed_units == 1) { //km/h
 item(FEAT_ROADTYPES, item_ISR1_road_electrified, 24) {
 	property {		
-		speed_limit:                 91 km/h;
+		speed_limit:                 90 km/h;
 	}
 }
 }
@@ -3094,6 +3360,13 @@ if (param_speed_units == 2) { //m/s
 item(FEAT_ROADTYPES, item_ISR1_road_electrified, 24) {
 	property {		
 		speed_limit:                 25 m/s;
+	}
+}
+}
+if (param_speed_units == 3) { //km/h, custom
+item(FEAT_ROADTYPES, item_ISR1_road_electrified, 24) {
+	property {	
+		speed_limit:                 param_alevel km/h;
 	}
 }
 }

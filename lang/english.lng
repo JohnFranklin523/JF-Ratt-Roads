@@ -2,8 +2,8 @@
 
 #Above is the English US id
 
-STR_GRF_NAME             :JFRattRoads 1.0.1
-STR_GRF_DESC             :{}3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_NAME             :JFRattRoads 1.1
+STR_GRF_DESC             :{}13 April 2023: v1.1 released, adding custom speed limits and fixing some graphical errors. 3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
@@ -13,10 +13,11 @@ STR_PARAM_INTRO_YEAR_DEF       :Year-Dependent {SILVER}(Default)
 STR_PARAM_INTRO_YEAR_REMOVE    :Always Available
 
 STR_PARAM_2_NAME               :Speed Units
-STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions
+STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions. When you choose "KM/H, Custom", you can adjust the speed limits yourself through the parameters below.
 STR_PARAM_UNITS_MPH            :MPH
 STR_PARAM_UNITS_KMH            :KM/H
 STR_PARAM_UNITS_MS             :M/S {SILVER}(Default)
+STR_PARAM_UNITS_KMH_CUSTOM     :KM/H, Custom
 
 
 STR_PARAM_3_NAME               :Speed Limits
@@ -34,6 +35,32 @@ STR_PARAM_5_DESC               :If enabled, this option adds electrified version
 
 STR_PARAM_6_NAME               :Enable houses along roads with "No Houses" sign
 STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside these roads, including Tracks, A-Level, Chidao, Highway, Autobahn and all roads originated from Part 3 (Industrial Roads, Single Lanes); activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
+
+STR_PARAM_7_NAME               :Speed Limits for Farm Tracks (km/h)
+STR_PARAM_7_DESC               :Change the speed limits for Farm Tracks in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 30. This does not affect costs and availabilities to houses.
+
+STR_PARAM_8_NAME               :Speed Limits for Dirt Tracks, Dirt Roads and Cobble Stone Roads (km/h)
+STR_PARAM_8_DESC               :Change the speed limits for Dirt Tracks, Dirt Roads and Cobble Stone Roads in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
+
+STR_PARAM_9_NAME               :Speed Limits for Town Roads (km/h)
+STR_PARAM_9_DESC               :Change the speed limits for Town Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
+
+STR_PARAM_10_NAME              :Speed Limits for C-Level Roads (km/h)
+STR_PARAM_10_DESC              :Change the speed limits for C-Level Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
+
+STR_PARAM_11_NAME              :Speed Limits for B-Level Roads, Sandy Roads and Chidao (km/h)
+STR_PARAM_11_DESC              :Change the speed limits for B-Level Roads, Sandy Roads and Chidao in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 70. This does not affect costs and availabilities to houses.
+
+STR_PARAM_12_NAME              :Speed Limits for A-Level Roads (km/h)
+STR_PARAM_12_DESC              :Change the speed limits for A-Level Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 90. This does not affect costs and availabilities to houses.
+
+STR_PARAM_13_NAME              :Speed Limits for Highways (km/h)
+STR_PARAM_13_DESC              :Change the speed limits for Highways in km/h. Max: 511 km/h. 0 km/h means no limits. Default: 120. This does not affect costs and availabilities to houses.
+
+STR_PARAM_14_NAME              :Speed Limits for Autobahn (km/h)
+STR_PARAM_14_DESC              :Change the speed limits for Autobahn in km/h. Max: 511 km/h. 0 km/h means no limits. Default: 0 (no speed limits). This does not affect costs and availabilities to houses.
+
+STR_NO_LIMITS                  :No Speed Limits
 
 STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
 STR_GENERIC_AUTOREPLACE              :Road Vehicles
