@@ -2,28 +2,35 @@
 
 #Above is the English US id
 
-STR_GRF_NAME             :JFRattRoads 1.1
-STR_GRF_DESC             :{}13 April 2023: v1.1 released, adding custom speed limits and fixing some graphical errors. 3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_NAME             :JFRattRoads 1.2
+STR_GRF_DESC             :{}5 October 2023: v1.2 Released! Adding standardised roadtype labels. NOT COMPATIBLE WITH PREVIOUS VERSIONS.{}13 April 2023: v1.1 released, adding custom speed limits and fixing some graphical errors. 3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
+
+STR_1_16                       :1/16
+STR_1_8                        :1/8
+STR_1_4                        :1/4
+STR_1_2                        :1/2
+STR_NORMAL                     :Normal
+STR_2X                         :2x
+STR_4X                         :4x
+STR_8X                         :8x
+STR_16X                        :16X
+STR_32X                        :32X
+
+STR_PARAM_STANDARDISATION_NAME          :Use Standardised Road Labels
+STR_PARAM_STANDARDISATION_DESC          :It is advised to turn this parameter off since the project of standardised road label is still in experiment.
 
 STR_PARAM_1_NAME               :Roadtype Availability
 STR_PARAM_1_DESC               :This parameter changes the availability of roadtypes based on date. {ORANGE}Year-Dependent{BLACK} is default behavior where each roadtype is introduced only after certain years, while {ORANGE}Always Available{BLACK} makes all roadtypes, well, always available
 STR_PARAM_INTRO_YEAR_DEF       :Year-Dependent {SILVER}(Default)
 STR_PARAM_INTRO_YEAR_REMOVE    :Always Available
 
-STR_PARAM_2_NAME               :Speed Units
-STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions. When you choose "KM/H, Custom", you can adjust the speed limits yourself through the parameters below.
-STR_PARAM_UNITS_MPH            :MPH
-STR_PARAM_UNITS_KMH            :KM/H
-STR_PARAM_UNITS_MS             :M/S {SILVER}(Default)
-STR_PARAM_UNITS_KMH_CUSTOM     :KM/H, Custom
+STR_PARAM_CONSTRUCTION_COST_NAME        :Construction Costs
+STR_PARAM_CONSTRUCTION_COST_DESC        :Adjust the construction costs of roads by the powers of 2.
 
-
-STR_PARAM_3_NAME               :Speed Limits
-STR_PARAM_3_DESC               :This parameter adjusts speed limits. {}{ORANGE}Normal{BLACK} is default speeds{}{ORANGE}No Speed Limits{BLACK} Pedal to the metal!
-STR_PARAM_DIFFICULTY_DEF       :Normal {SILVER}(Default)
-STR_PARAM_DIFFICULTY_NONE      :No Speed Limits
+STR_PARAM_MAINTENANCE_COST_NAME         :Maintenance Costs
+STR_PARAM_MAINTENANCE_COST_DESC         :Adjust the maintenance costs of roads by the powers of 2.
 
 STR_PARAM_4_NAME               :Road Style
 STR_PARAM_4_DESC               :This parameter allows you to adjust which road style appears in-game. Currently there are two options: {ORANGE}Australia/Europe{BLACK} and {ORANGE}American
@@ -34,57 +41,80 @@ STR_PARAM_5_NAME               :Enable electrified roads
 STR_PARAM_5_DESC               :If enabled, this option adds electrified versions of 4 roadtypes for use with trolleybuses and other catenary-powered road vehicles. These roadtypes require the addition of NRT-enabled vehicle sets to be useful, hence why they are disabled by default.
 
 STR_PARAM_6_NAME               :Enable houses along roads with "No Houses" sign
-STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside these roads, including Tracks, A-Level, Chidao, Highway, Autobahn and all roads originated from Part 3 (Industrial Roads, Single Lanes); activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
+STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside these roads, including Tracks, A-Level, Gallop Road, Highway, Autobahn and all roads originated from Part 3 (Industrial Roads, Single Lanes); activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
 
 STR_PARAM_7_NAME               :Speed Limits for Farm Tracks (km/h)
 STR_PARAM_7_DESC               :Change the speed limits for Farm Tracks in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 30. This does not affect costs and availabilities to houses.
 
-STR_PARAM_8_NAME               :Speed Limits for Dirt Tracks, Dirt Roads and Cobble Stone Roads (km/h)
-STR_PARAM_8_DESC               :Change the speed limits for Dirt Tracks, Dirt Roads and Cobble Stone Roads in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
+STR_PARAM_8_NAME               :Speed Limits for Dirt Tracks (km/h)
+STR_PARAM_8_DESC               :Change the speed limits for Dirt Tracks in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
-STR_PARAM_9_NAME               :Speed Limits for Town Roads (km/h)
-STR_PARAM_9_DESC               :Change the speed limits for Town Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
+STR_PARAM_9_NAME               :Speed Limits for Dirt Roads (km/h)
+STR_PARAM_9_DESC               :Change the speed limits for Dirt Roads in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
-STR_PARAM_10_NAME              :Speed Limits for C-Level Roads (km/h)
-STR_PARAM_10_DESC              :Change the speed limits for C-Level Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
+STR_PARAM_10_NAME               :Speed Limits for Cobble Stone Roads (km/h)
+STR_PARAM_10_DESC               :Change the speed limits for Cobble Stone Roads in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
-STR_PARAM_11_NAME              :Speed Limits for B-Level Roads, Sandy Roads and Chidao (km/h)
-STR_PARAM_11_DESC              :Change the speed limits for B-Level Roads, Sandy Roads and Chidao in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 70. This does not affect costs and availabilities to houses.
+STR_PARAM_11_NAME               :Speed Limits for Sandy Roads (km/h)
+STR_PARAM_11_DESC               :Change the speed limits for Sandy Roads in km/h. Max: 127 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
-STR_PARAM_12_NAME              :Speed Limits for A-Level Roads (km/h)
-STR_PARAM_12_DESC              :Change the speed limits for A-Level Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 90. This does not affect costs and availabilities to houses.
+STR_PARAM_12_NAME               :Speed Limits for Gallop Roads (km/h)
+STR_PARAM_12_DESC               :Change the speed limits for Gallop Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
-STR_PARAM_13_NAME              :Speed Limits for Highways (km/h)
-STR_PARAM_13_DESC              :Change the speed limits for Highways in km/h. Max: 511 km/h. 0 km/h means no limits. Default: 120. This does not affect costs and availabilities to houses.
+STR_PARAM_13_NAME               :Speed Limits for Town Roads (km/h)
+STR_PARAM_13_DESC               :Change the speed limits for Town Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
 
-STR_PARAM_14_NAME              :Speed Limits for Autobahn (km/h)
-STR_PARAM_14_DESC              :Change the speed limits for Autobahn in km/h. Max: 511 km/h. 0 km/h means no limits. Default: 0 (no speed limits). This does not affect costs and availabilities to houses.
+STR_PARAM_14_NAME               :Speed Limits for City Avenue (km/h)
+STR_PARAM_14_DESC               :Change the speed limits for City Avenue in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 50. This does not affect costs and availabilities to houses.
+
+STR_PARAM_15_NAME              :Speed Limits for Rural Roads (km/h)
+STR_PARAM_15_DESC              :Change the speed limits for Rural Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 70. This does not affect costs and availabilities to houses.
+
+STR_PARAM_16_NAME              :Speed Limits for National Roads (km/h)
+STR_PARAM_16_DESC              :Change the speed limits for National Roads in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 90. This does not affect costs and availabilities to houses.
+
+STR_PARAM_17_NAME              :Speed Limits for Highways (km/h)
+STR_PARAM_17_DESC              :Change the speed limits for Highways in km/h. Max: 511 km/h. 0 km/h means no limits. Default: 120. This does not affect costs and availabilities to houses.
+
+STR_PARAM_18_NAME              :Speed Limits for Autobahn (km/h)
+STR_PARAM_18_DESC              :Change the speed limits for Autobahn in km/h. Max: 511 km/h. 0 km/h means no limits. 1 km/h means disabled. Default: 0 (no speed limits). This does not affect costs and availabilities to houses.
+
+STR_PARAM_19_NAME              :Speed Limits for Industrial Road 1 (km/h)
+STR_PARAM_19_DESC              :Change the speed limits for Industrial Road 1 in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 60. This does not affect costs and availabilities to houses.
+
+STR_PARAM_20_NAME              :Speed Limits for Industrial Road 2 (km/h)
+STR_PARAM_20_DESC              :Change the speed limits for Industrial Road 2 in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 70. This does not affect costs and availabilities to houses.
+
+STR_PARAM_21_NAME              :Speed Limits for Industrial Road 3 (km/h)
+STR_PARAM_21_DESC              :Change the speed limits for Industrial Road 3 in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 80. This does not affect costs and availabilities to houses.
 
 STR_NO_LIMITS                  :No Speed Limits
+
+STR_DISABLE                    :Disable
 
 STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
 STR_GENERIC_AUTOREPLACE              :Road Vehicles
 STR_GENERIC_NEW_ENGINE               :road
 
-STR_sand_tracks2_NAME	    	:Farm Tracks (No Houses)
-STR_sand_tracks2_TOOLBAR        :Farm Tracks (No Houses)
-STR_sand_tracks2_MENU           :Farm Tracks (No Houses)
+STR_farm_tracks_NAME	    	:Farm Tracks (No Houses)
+STR_farm_tracks_TOOLBAR        :Farm Tracks (No Houses)
+STR_farm_tracks_MENU           :Farm Tracks (No Houses)
 
-STR_sand_tracks_NAME	     	:Dirt Tracks (No Houses)
-STR_sand_tracks_TOOLBAR         :Dirt Tracks (No Houses)
-STR_sand_tracks_MENU            :Dirt Tracks (No Houses)
+STR_dirt_tracks_NAME	     	:Dirt Tracks (No Houses)
+STR_dirt_tracks_TOOLBAR         :Dirt Tracks (No Houses)
+STR_dirt_tracks_MENU            :Dirt Tracks (No Houses)
 
-STR_sand_ROAD_NAME	     	    :Dirt Road
-STR_sand_ROAD_TOOLBAR	     	:Dirt Road
-STR_sand_ROAD_MENU	     	    :Dirt Road
+STR_dirt_ROAD_NAME	     	    :Dirt Road
+STR_dirt_ROAD_TOOLBAR	     	:Dirt Road
+STR_dirt_ROAD_MENU	     	    :Dirt Road
 
-STR_sand_ROAD_ELECTRIFIED_NAME          :Electrified Dirt Road
-STR_sand_ROAD_ELECTRIFIED_TOOLBAR       :Electrified Dirt Road
-STR_sand_ROAD_ELECTRIFIED_MENU          :Electrified Dirt Road
+STR_dirt_ROAD_ELECTRIFIED_NAME          :Electrified Dirt Road
+STR_dirt_ROAD_ELECTRIFIED_TOOLBAR       :Electrified Dirt Road
+STR_dirt_ROAD_ELECTRIFIED_MENU          :Electrified Dirt Road
 
-STR_beach_ROAD_NAME    		    :Sandy Road (No Houses)
-STR_beach_ROAD_TOOLBAR	     	:Sandy Road (No Houses)
-STR_beach_ROAD_MENU	     		:Sandy Road (No Houses)
+STR_sandy_ROAD_NAME    		    :Sandy Road (No Houses)
+STR_sandy_ROAD_TOOLBAR	     	:Sandy Road (No Houses)
+STR_sandy_ROAD_MENU	     		:Sandy Road (No Houses)
 
 STR_cobble_ROAD_NAME	     	:Cobble Stone Road
 STR_cobble_ROAD_TOOLBAR	     	:Cobble Stone Road
@@ -94,77 +124,77 @@ STR_cobble_road_ELECTRIFIED_ROAD_NAME     	 :Electrified Cobble Stone Road
 STR_cobble_road_ELECTRIFIED_ROAD_TOOLBAR  	 :Electrified Cobble Stone Road
 STR_cobble_road_ELECTRIFIED_ROAD_MENU    	 :Electrified Cobble Stone Road
 
-STR_clickclack_ROAD_NAME	:Chidao (No Houses)
-STR_clickclack_ROAD_TOOLBAR	:Chidao (No Houses)
-STR_clickclack_ROAD_MENU	:Chidao (No Houses)
+STR_gallop_ROAD_NAME	:Gallop Road (Ancient Highway, No Houses)
+STR_gallop_ROAD_TOOLBAR	:Gallop Road (Ancient Highway, No Houses)
+STR_gallop_ROAD_MENU	:Gallop Road (Ancient Highway, No Houses)
 
-STR_BASIC_ASPHALT_ROAD_NAME          :C-Level Road
-STR_BASIC_ASPHALT_ROAD_TOOLBAR       :C-Level Road
-STR_BASIC_ASPHALT_ROAD_MENU          :C-Level Road
+STR_rural_ROAD_NAME          :Rural Road
+STR_rural_ROAD_TOOLBAR       :Rural Road
+STR_rural_ROAD_MENU          :Rural Road
 
-STR_IMPROVED_ASPHALT_ROAD_NAME       :Town Road
-STR_IMPROVED_ASPHALT_ROAD_TOOLBAR    :Town Road
-STR_IMPROVED_ASPHALT_ROAD_MENU       :Town Road
+STR_town_ROAD_NAME       :Town Road
+STR_town_ROAD_TOOLBAR    :Town Road
+STR_town_ROAD_MENU       :Town Road
 
-STR_MODERN_ASPHALT_ROAD_NAME         :B-Level Road
-STR_MODERN_ASPHALT_ROAD_TOOLBAR      :B-Level Road
-STR_MODERN_ASPHALT_ROAD_MENU         :B-Level Road
+STR_avenue_NAME         :City Avenue
+STR_avenue_TOOLBAR      :City Avenue
+STR_avenue_MENU         :City Avenue
 
-STR_modern_concrete_ROAD_NAME         :A-Level Road (No Houses)
-STR_modern_concrete_ROAD_TOOLBAR      :A-Level Road (No Houses)
-STR_modern_concrete_ROAD_MENU         :A-Level Road (No Houses)
+STR_national_ROAD_NAME         :National Road (No Houses)
+STR_national_ROAD_TOOLBAR      :National Road (No Houses)
+STR_national_ROAD_MENU         :National Road (No Houses)
 
-STR_HIGHWAY_ROAD_NAME                :Highway (No Houses)
-STR_HIGHWAY_ROAD_TOOLBAR             :Highway (No Houses)
-STR_HIGHWAY_ROAD_MENU                :Highway (No Houses)
+STR_highway_NAME                :Highway (No Houses)
+STR_highway_TOOLBAR             :Highway (No Houses)
+STR_highway_MENU                :Highway (No Houses)
 
-STR_HIGHWAY2_ROAD_NAME                :Autobahn (No Houses)
-STR_HIGHWAY2_ROAD_TOOLBAR             :Autobahn (No Houses)
-STR_HIGHWAY2_ROAD_MENU                :Autobahn (No Houses)
+STR_autobahn_NAME                :Autobahn (No Houses)
+STR_autobahn_TOOLBAR             :Autobahn (No Houses)
+STR_autobahn_MENU                :Autobahn (No Houses)
 
 STR_cobble_stone_ELECTRIFIED_ROAD_NAME          :Electrified Cobble Stone Road
 STR_cobble_stone_ELECTRIFIED_ROAD_TOOLBAR       :Electrified Cobble Stone Road
 STR_cobble_stone_ELECTRIFIED_ROAD_MENU          :Electrified Cobble Stone Road
 
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified C-Level Road
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified C-Level Road
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU       	 :Electrified C-Level Road
+STR_rural_ROAD_ELECTRIFIED_NAME     	 :Electrified Rural Road
+STR_rural_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Rural Road
+STR_rural_ROAD_ELECTRIFIED_MENU       	 :Electrified Rural Road
 
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Town Road
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Town Road
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Town Road
+STR_town_ROAD_ELECTRIFIED_NAME     	 :Electrified Town Road
+STR_town_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Town Road
+STR_town_ROAD_ELECTRIFIED_MENU    	 :Electrified Town Road
 
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified B-Level Road
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified B-Level Road
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified B-Level Road
+STR_avenue_ELECTRIFIED_NAME     	 :Electrified City Avenue
+STR_avenue_ELECTRIFIED_TOOLBAR  	 :Electrified City Avenue
+STR_avenue_ELECTRIFIED_MENU    	 :Electrified City Avenue
 
-STR_modern_concrete_ROAD_ELECTRIFIED_NAME     	 :Electrified A-Level Road (No Houses)
-STR_modern_concrete_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified A-Level Road (No Houses)
-STR_modern_concrete_ROAD_ELECTRIFIED_MENU    	 :Electrified A-Level Road (No Houses)
+STR_national_ROAD_ELECTRIFIED_NAME     	 :Electrified National Road (No Houses)
+STR_national_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified National Road (No Houses)
+STR_national_ROAD_ELECTRIFIED_MENU    	 :Electrified National Road (No Houses)
 
-STR_ConcreteRoad_ROAD_NAME  	:Industrial C-Level Road (No Houses)
-STR_ConcreteRoad_ROAD_TOOLBAR	:Industrial C-Level Road (No Houses)
-STR_ConcreteRoad_ROAD_MENU	    :Industrial C-Level Road (No Houses)
+STR_industrial1_ROAD_NAME  	:Industrial Road 1 (No Houses)
+STR_industrial1_ROAD_TOOLBAR	:Industrial Road 1 (No Houses)
+STR_industrial1_ROAD_MENU	    :Industrial Road 1 (No Houses)
 
-STR_AUZY_ROAD_NAME                :Industrial B-Level Road (No Houses)
-STR_AUZY_ROAD_TOOLBAR             :Industrial B-Level Road (No Houses)
-STR_AUZY_ROAD_MENU                :Industrial B-Level Road (No Houses)
+STR_industrial2_ROAD_NAME                :Industrial Road 2 (No Houses)
+STR_industrial2_ROAD_TOOLBAR             :Industrial Road 2 (No Houses)
+STR_industrial2_ROAD_MENU                :Industrial Road 2 (No Houses)
 
-STR_ISR1_ROAD_NAME                :Industrial A-Level Road (No Houses)
-STR_ISR1_ROAD_TOOLBAR             :Industrial A-Level Road (No Houses)
-STR_ISR1_ROAD_MENU                :Industrial A-Level Road (No Houses)
+STR_industrial3_ROAD_NAME                :Industrial Road 3 (No Houses)
+STR_industrial3_ROAD_TOOLBAR             :Industrial Road 3 (No Houses)
+STR_industrial3_ROAD_MENU                :Industrial Road 3 (No Houses)
 
-STR_ConcreteRoad_ROAD_ELECTRIFIED_NAME	    :Electric Industrial C-Level Road (No Houses)
-STR_ConcreteRoad_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial C-Level Road (No Houses)
-STR_ConcreteRoad_ROAD_ELECTRIFIED_MENU	    :Electric Industrial C-Level Road (No Houses)
+STR_industrial1_ROAD_ELECTRIFIED_NAME	    :Electric Industrial Road 1 (No Houses)
+STR_industrial1_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial Road 1 (No Houses)
+STR_industrial1_ROAD_ELECTRIFIED_MENU	    :Electric Industrial Road 1 (No Houses)
 
-STR_AUZY_ROAD_ELECTRIFIED_NAME	    :Electric Industrial B-Level Road (No Houses)
-STR_AUZY_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial B-Level Road (No Houses)
-STR_AUZY_ROAD_ELECTRIFIED_MENU	    :Electric Industrial B-Level Road (No Houses)
+STR_industrial2_ROAD_ELECTRIFIED_NAME	    :Electric Industrial Road 2 (No Houses)
+STR_industrial2_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial Road 2 (No Houses)
+STR_industrial2_ROAD_ELECTRIFIED_MENU	    :Electric Industrial Road 2 (No Houses)
 
-STR_ISR1_ROAD_ELECTRIFIED_NAME	    :Electric Industrial A-Level Road (No Houses)
-STR_ISR1_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial A-Level Road (No Houses)
-STR_ISR1_ROAD_ELECTRIFIED_MENU	    :Electric Industrial A-Level Road (No Houses)
+STR_industrial3_ROAD_ELECTRIFIED_NAME	    :Electric Industrial Road 3 (No Houses)
+STR_industrial3_ROAD_ELECTRIFIED_TOOLBAR	:Electric Industrial Road 3 (No Houses)
+STR_industrial3_ROAD_ELECTRIFIED_MENU	    :Electric Industrial Road 3 (No Houses)
 
 
 STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
