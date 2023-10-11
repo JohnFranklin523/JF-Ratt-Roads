@@ -1,0 +1,29 @@
+Autobahn 			RBCN JF18 NoLimit NoHouse 2000
+Motorway 			RACN JF17 120	  NoHouse 1960
+National Road			REBN JF15 90	  NoHouse 1950
+Rural Road			RDBN JF09 70	  NoHouse 1900
+City Avenue			RCBN JF13 70	  House	  1970
+Town Road			RBBN JF11 50	  House	  1920
+Cobble Stone Road		RABN JF06 40	  House	  0
+Dirt Road			RAAN JF03 40	  House	  0
+
+Dirt Tracks			RBaN JF02 40	  NoHouse 0
+Farm Tracks			RAaN JF01 30	  NoHouse 0
+Sandy Road			RBAN JF05 55	  NoHouse 0
+Ancient Highway 		RCAN JF08 60	  NoHouse 0
+
+Industrial Road 3		ICBN JF23 80	  NoHouse 1950
+Industrial Road 2		IBBN JF21 70	  NoHouse 1900
+Industrial Road 1		IABN JF19 60	  NoHouse 1700 
+
+Electrified National Road	REBE JF16 90	  NoHouse 1950
+Electrified Rural Road		RDBE JF10 70	  NoHouse 1900
+Electrified City Avenue		RCBE JF14 70	  House	  1970
+Electrified Town Road		RBBE JF12 50	  House   1920
+Electrified Cobble Stone Road	RABE JF07 40	  House   0
+Electrified Dirt Road		RAAE JF04 40	  House	  0
+
+Electrified Industrial Road 3	ICBE JF24 80	  NoHouse 1950
+Electrified Industrial Road 2	IBBE JF22 70	  NoHouse 1900
+Electrified Industrial Road 1	IABE JF20 60	  NoHouse 1700
+

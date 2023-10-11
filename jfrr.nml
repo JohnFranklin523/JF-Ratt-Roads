@@ -6,12 +6,12 @@
 */
 
 grf {
-		grfid: "__\02\00";
+		grfid: "\5F\5F\02\00";
 		name: string(STR_GRF_NAME);
 		desc: string(STR_GRF_DESC);
-		url: string(STR_GRF_URL);
-		version: 8;
-		min_compatible_version: 7;
+		url : string(STR_GRF_URL);
+		version: 9;
+		min_compatible_version: 9;
 		param 0 {
 			param_standardisation {
 				type: bool;
@@ -164,7 +164,7 @@ grf {
 				desc:		string(STR_PARAM_11_DESC);
 				min_value: 0;
 				max_value: 127;
-				def_value: 55;
+				def_value: 56;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -177,7 +177,7 @@ grf {
 				desc:		string(STR_PARAM_12_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 60;
+				def_value: 61;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -190,7 +190,7 @@ grf {
 				desc:		string(STR_PARAM_13_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 50;
+				def_value: 51;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -203,7 +203,7 @@ grf {
 				desc:		string(STR_PARAM_14_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 70;
+				def_value: 71;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -216,7 +216,7 @@ grf {
 				desc:		string(STR_PARAM_15_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 70;
+				def_value: 71;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -229,7 +229,7 @@ grf {
 				desc:		string(STR_PARAM_16_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 90;
+				def_value: 91;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -242,7 +242,7 @@ grf {
 				desc:		string(STR_PARAM_17_DESC);
 				min_value: 0;
 				max_value: 511;
-				def_value: 120;
+				def_value: 121;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -269,7 +269,7 @@ grf {
 				desc:		string(STR_PARAM_19_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 60;
+				def_value: 61;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -282,7 +282,7 @@ grf {
 				desc:		string(STR_PARAM_20_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 70;
+				def_value: 71;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -295,7 +295,7 @@ grf {
 				desc:		string(STR_PARAM_21_DESC);
 				min_value: 0;
 				max_value: 255;
-				def_value: 80;
+				def_value: 81;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -532,13 +532,13 @@ roadtypetable { ROAD, /* Default */
 	ELSP, ELA0, ELA1, ELA2, /* Ratt Electric Roads */
 	EGRV, ELAS, /* unspooled electric roads */
 	IRD0, IRD1, /* U&RaTT depreciated */
-	RAaN, RBaN, RBAN, RCAN, RDAN, RBBN, RCBN, RDBN, REBN, RFBN, RGCN, RHCN, RBAE, RBBE, RCBE, RDBE, REBE, RFBE, IDBN, IEBN, IFBN, IDBE, IEBE, IFBE,
+	RAaN, RBaN, RAAN, RBAN, RCAN, RABN, RBBN, RCBN, RDBN, REBN, RACN, RBCN, RAAE, RABE, RBBE, RCBE, RDBE, REBE, IABN, IBBN, ICBN, IABE, IBBE, ICBE, /* JF Ratt Roads, standardised */
 }
 
 item(FEAT_ROADTYPES, item_country_asphalt_road2, 00) {
 	property {
 		label:                       "ROAD";
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24", "ACLK", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD", "AR21", "ELA1", "AR22", "ELA2", "AR24", "ELA0", "ALA0", "ASP0", "FUEL", "ASP1", "ASP2", "SAND", "COBB", "COB2", "COB3", "COB4", "BEAC", "HWAY", "DIRT", "SETT", "ISR1", "ISR2", "AUZ1", "AUZ2", "AUZ3", "AUZ4", "AUZ5", "AUZ6", "AUZ7", "AUZ8", "AUZ9", "AUZ0", "AUZA", "AUZB", "AUZC", "AUZD", "AUZE", "AUZF", "AUZG", "AUZH", "FWAY", "AUZI", "AUZJ", "AUZK", "AUZL", "AUZM", "AUZY", "AUZZ", "YARD", "COAL", "HAUL",	"OFFR",	"ORD0",	"ORD1",	"ORD2",	"ORD3",	"ORD4",	"SRD0",	"SRD1",	"SRD2",	"ARD0",	"ARD1",	"AER0",	"ARD2",	"ARD3",	"AER1",	"ARD4",	"ARD5",	"AER2",	"WRD0",	"WRD1",	"URD0",	"URD1",	"UER1",	"IRD0",	"IRD1", "BIKE", "BRIC", "NL30", "NL50", "NL5F", "NL60", "NL80", "NL10", "NL12"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24", "ACLK", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD", "AR21", "ELA1", "AR22", "ELA2", "AR24", "ELA0", "ALA0", "ASP0", "FUEL", "ASP1", "ASP2", "SAND", "COBB", "COB2", "COB3", "COB4", "BEAC", "HWAY", "DIRT", "SETT", "ISR1", "ISR2", "AUZ1", "AUZ2", "AUZ3", "AUZ4", "AUZ5", "AUZ6", "AUZ7", "AUZ8", "AUZ9", "AUZ0", "AUZA", "AUZB", "AUZC", "AUZD", "AUZE", "AUZF", "AUZG", "AUZH", "FWAY", "AUZI", "AUZJ", "AUZK", "AUZL", "AUZM", "AUZY", "AUZZ", "YARD", "COAL", "HAUL",	"OFFR",	"ORD0",	"ORD1",	"ORD2",	"ORD3",	"ORD4",	"SRD0",	"SRD1",	"SRD2",	"ARD0",	"ARD1",	"AER0",	"ARD2",	"ARD3",	"AER1",	"ARD4",	"ARD5",	"AER2",	"WRD0",	"WRD1",	"URD0",	"URD1",	"UER1",	"IRD0",	"IRD1", "BIKE", "BRIC", "NL30", "NL50", "NL5F", "NL60", "NL80", "NL10", "NL12"];
 		roadtype_flags:				 bitmask(ROADTYPE_FLAG_HIDDEN);
 }
 }
@@ -662,7 +662,7 @@ item(FEAT_ROADTYPES, item_farm_tracks, 01) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBAE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RAAE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -775,7 +775,7 @@ item(FEAT_ROADTYPES, item_dirt_tracks, 02) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBAE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RAAE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           3; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            6; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -858,7 +858,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_dirt_road, 03) {
 		property {
-			label:					"RBAN";
+			label:					"RAAN";
 		}
 	}
 } else {
@@ -877,7 +877,7 @@ item(FEAT_ROADTYPES, item_dirt_road, 03) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 //		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 		construction_cost:           5; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            10; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -960,7 +960,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_sandy_road, 05) {
 		property {
-			label:					"RCAN";
+			label:					"RBAN";
 		}
 	}
 } else {
@@ -979,7 +979,7 @@ item(FEAT_ROADTYPES, item_sandy_road, 05) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           7; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            14; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1064,7 +1064,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_cobble_road, 06) {
 		property {
-			label:					"RBBN";
+			label:					"RABN";
 		}
 	}
 } else {
@@ -1083,7 +1083,7 @@ item(FEAT_ROADTYPES, item_cobble_road, 06) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 		construction_cost:           5; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            10; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1208,7 +1208,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_gallop_road, 08) {
 		property {
-			label:					"RDAN";
+			label:					"RCAN";
 		}
 	}
 } else {
@@ -1227,7 +1227,7 @@ item(FEAT_ROADTYPES, item_gallop_road, 08) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES) : bitmask();
 		construction_cost:           7; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            14; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1313,7 +1313,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_rural_road, 09) {
 		property {
-			label:					"REBN";
+			label:					"RDBN";
 		}
 	}
 } else {
@@ -1333,7 +1333,7 @@ item(FEAT_ROADTYPES, item_rural_road, 09) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES) : bitmask();
 		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1465,7 +1465,7 @@ switch (FEAT_ROADTYPES, SELF, switch_town_bridge_overlay_style_check, param_road
 }
 
 /* Depots */ 
-spriteset(depot_town_fence, "gfx/depot_improved.png") { 
+spriteset(depot_town_fence, "gfx/depot_modern.png") { 
 tmpl_depot() 
 } 
 
@@ -1473,7 +1473,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_town_road, 11) {
 		property {
-			label:					"RCBN";
+			label:					"RBBN";
 		}
 	}
 } else {
@@ -1492,7 +1492,7 @@ item(FEAT_ROADTYPES, item_town_road, 11) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1616,7 +1616,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_avenue, 13) {
 		property {
-			label:					"RDBN";
+			label:					"RCBN";
 		}
 	}
 } else {
@@ -1635,7 +1635,7 @@ item(FEAT_ROADTYPES, item_avenue, 13) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 //		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 		construction_cost:           12; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            20; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1751,7 +1751,7 @@ switch (FEAT_ROADTYPES, SELF, switch_national_bridge_overlay_style_check, param_
 }
 
 /* Depots */ 
-spriteset(depot_national, "gfx/depot_improved.png") { 
+spriteset(depot_national, "gfx/depot_modern.png") { 
 tmpl_depot() 
 } 
 
@@ -1759,7 +1759,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_national_road, 15) {
 		property {
-			label:					"RFBN";
+			label:					"REBN";
 		}
 	}
 } else {
@@ -1778,7 +1778,7 @@ item(FEAT_ROADTYPES, item_national_road, 15) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBAN", "RCAN", "RDAN", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_NO_LEVEL_CROSSING) : bitmask(ROADTYPE_FLAG_NO_LEVEL_CROSSING); //default(0) behavior disables houses; with this param turned on houses are enabled (this is to prevent griefing in multiplayer)
 		construction_cost:           12; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            20; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -1904,7 +1904,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_highway, 17) {
 		property {
-			label:					"RGCN";
+			label:					"RACN";
 		}
 	}
 } else {
@@ -1923,7 +1923,7 @@ item(FEAT_ROADTYPES, item_highway, 17) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RABN", "RACN", "RABE", "IABN", "IABE", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_NO_LEVEL_CROSSING) : bitmask(ROADTYPE_FLAG_NO_LEVEL_CROSSING); //default(0) behavior disables houses; with this param turned on houses are enabled (this is to prevent griefing in multiplayer)
 		construction_cost:           16; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            24; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2049,7 +2049,7 @@ if (param[18] == 1) {
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_autobahn, 18) {
 		property {
-			label:					"RHCN";
+			label:					"RBCN";
 		}
 	}
 } else {
@@ -2068,7 +2068,7 @@ if (param[0]) {
 			build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 			autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 			new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-			powered_roadtype_list:       ["ROAD", "OLD_", "RBBN", "RCBN", "RDBN", "REBN", "RFBN", "RGCN", "RHCN", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+			powered_roadtype_list:       ["ROAD", "OLD_", "RABN", "RACN", "RABE", "IABN", "IABE", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 			roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_NO_LEVEL_CROSSING) : bitmask(ROADTYPE_FLAG_NO_LEVEL_CROSSING); //default(0) behavior disables houses; with this param turned on houses are enabled (this is to prevent griefing in multiplayer)
 			construction_cost:           24; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 			maintenance_cost:            32; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2155,7 +2155,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial1_road, 19) {
 		property {
-			label:					"IDBN";
+			label:					"IABN";
 		}
 	}
 } else {
@@ -2174,7 +2174,7 @@ item(FEAT_ROADTYPES, item_industrial1_road, 19) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           5; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            10; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2257,7 +2257,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial2_road, 21) {
 		property {
-			label:					"IEBN";
+			label:					"IBBN";
 		}
 	}
 } else {
@@ -2276,7 +2276,7 @@ item(FEAT_ROADTYPES, item_industrial2_road, 21) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           7; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            14; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2360,7 +2360,7 @@ tmpl_depot()
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial3_road, 23) {
 		property {
-			label:					"IFBN";
+			label:					"ICBN";
 		}
 	}
 } else {
@@ -2379,7 +2379,7 @@ item(FEAT_ROADTYPES, item_industrial3_road, 23) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "OLD_", "IDBN", "IEBN", "IFBN", "IDBE", "IEBE", "IFBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           10; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            18; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2439,7 +2439,7 @@ switch (FEAT_ROADTYPES, SELF, switch_electric_road_gui_style_check, param_road_s
 item(FEAT_ROADTYPES, item_electrified_roads0, 27) {
 	property {
 		label:                       "ELRD";
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:				 bitmask(ROADTYPE_FLAG_HIDDEN, ROADTYPE_FLAG_CATENARY);
 }
 }
@@ -2452,7 +2452,7 @@ COBBLE STONE ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_cobble_road_electric, 07) {
 		property {
-			label:					"RBBE";
+			label:					"RABE";
 		}
 	}
 } else {
@@ -2471,7 +2471,7 @@ item(FEAT_ROADTYPES, item_cobble_road_electric, 07) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            12; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2502,7 +2502,7 @@ DIRT ROAD ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_dirt_road_electrified, 04) {
 		property {
-			label:					"RBAE";
+			label:					"RAAE";
 		}
 	}
 } else {
@@ -2521,7 +2521,7 @@ item(FEAT_ROADTYPES, item_dirt_road_electrified, 04) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           7; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            10; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2554,7 +2554,7 @@ C-Level ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_rural_road_electrified, 10) {
 		property {
-			label:					"REBE";
+			label:					"RDBE";
 		}
 	}
 } else {
@@ -2573,7 +2573,7 @@ item(FEAT_ROADTYPES, item_rural_road_electrified, 10) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           12; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            20; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2602,7 +2602,7 @@ Town ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_town_road_electrified, 12) {
 		property {
-			label:					"RCBE";
+			label:					"RBBE";
 		}
 	}
 } else {
@@ -2621,7 +2621,7 @@ item(FEAT_ROADTYPES, item_town_road_electrified, 12) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           12; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            20; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2650,7 +2650,7 @@ B-Level ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_avenue_electrified, 14) {
 		property {
-			label:					"RDBE";
+			label:					"RCBE";
 		}
 	}
 } else {
@@ -2669,7 +2669,7 @@ item(FEAT_ROADTYPES, item_avenue_electrified, 14) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           16; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            24; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2698,7 +2698,7 @@ A-Level ELECTRIC ROAD
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_national_road_electrified, 16) {
 		property {
-			label:					"RFBE";
+			label:					"REBE";
 		}
 	}
 } else {
@@ -2717,7 +2717,7 @@ item(FEAT_ROADTYPES, item_national_road_electrified, 16) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["RBAE", "RBBE", "RCBE", "RDBE", "REBE", "RFBE", "IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_NO_LEVEL_CROSSING, ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_NO_LEVEL_CROSSING, ROADTYPE_FLAG_CATENARY); //default(0) behavior disables houses; with this param turned on houses are enabled (this is to prevent griefing in multiplayer)
 		construction_cost:           24; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            32; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2745,7 +2745,7 @@ Industrial_C-Level_ROAD_ELECTRIFIED
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial1_road_electrified, 20) {
 		property {
-			label:					"IDBE";
+			label:					"IABE";
 		}
 	}
 } else {
@@ -2764,7 +2764,7 @@ item(FEAT_ROADTYPES, item_industrial1_road_electrified, 20) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           10; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
@@ -2792,7 +2792,7 @@ Industrial_B-Level_ROAD_ELECTRIFIED
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial2_road_electrified, 22) {
 		property {
-			label:					"IEBE";
+			label:					"IBBE";
 		}
 	}
 } else {
@@ -2811,11 +2811,11 @@ item(FEAT_ROADTYPES, item_industrial2_road_electrified, 22) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           15; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            22; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-		speed_limit:                 param[20] mph;
+		speed_limit:                 param[20] km/h;
 		sort_order:                  56;
 //		map_colour:                  ?;
 //		requires_roadtype_list:      ?;
@@ -2840,7 +2840,7 @@ Industrial_A-Level_ROAD_ELECTRIFIED
 if (param[0]) {
 	item (FEAT_ROADTYPES, item_industrial3_road_electrified, 24) {
 		property {
-			label:					"IFBE";
+			label:					"ICBE";
 		}
 	}
 } else {
@@ -2859,7 +2859,7 @@ item(FEAT_ROADTYPES, item_industrial3_road_electrified, 24) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["IDBE", "IEBE", "IFBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
+		powered_roadtype_list:       ["IABE", "IBBE", "ICBE", "JF04", "JF07", "JF10", "JF12", "JF14", "JF16", "JF20", "JF22", "JF24", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD",  "ELA1", "ELA2",  "ELA0", "ALA0"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_CATENARY);
 		construction_cost:           20; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            30; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		

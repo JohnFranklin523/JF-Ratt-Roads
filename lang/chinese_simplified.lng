@@ -2,8 +2,8 @@
 
 #Above is the Chinese (Simplified) id
 
-STR_GRF_NAME             :JFRattRoads 版本1.2
-STR_GRF_DESC             :{}2023年10月5日: 版本1.2发布! 增设标准化道路标签. 与之前版本不兼容.{}2023年4月13日: 版本1.1发布, 增加了自定义限速, 修复了一些图形错误. 2023年2月3日: 版本1.0发布! 与之前版本不兼容. 2023年2月1日: 修改参数, 修改路名, 增加中文翻译. 2022年12月4日: 限速增加 "m/s" 选项. by John Franklin. 2021年6月8日: 澳洲/欧洲/北美洲的柏油/沥青公路, 部分带有可积雪的栅栏. {}{YELLOW}适用版本: OpenTTD 1.10 或更新. {}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG 与 Andrew350 {ORANGE}{}受GPLv2版权条例保护
+STR_GRF_NAME             :JFRattRoads 版本1.2.1
+STR_GRF_DESC             :{}2023年10月11日: 版本1.2.1发布! 修复道路标签与工业道路限速bug. 与之前版本 (含1.2) 不兼容.{}2023年10月5日: 版本1.2发布! 增设标准化道路标签. 与之前版本不兼容.{}2023年4月13日: 版本1.1发布, 增加了自定义限速, 修复了一些图形错误. 2023年2月3日: 版本1.0发布! 与之前版本不兼容. 2023年2月1日: 修改参数, 修改路名, 增加中文翻译. 2022年12月4日: 限速增加 "m/s" 选项. by John Franklin. 2021年6月8日: 澳洲/欧洲/北美洲的柏油/沥青公路, 部分带有可积雪的栅栏. {}{YELLOW}适用版本: OpenTTD 1.10 或更新. {}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG 与 Andrew350 {ORANGE}{}受GPLv2版权条例保护
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
