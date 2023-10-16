@@ -533,12 +533,15 @@ roadtypetable { ROAD, /* Default */
 	//EGRV, ELAS, /* unspooled electric roads */
 	//IRD0, IRD1, /* U&RaTT depreciated */
 	RAaN, RBaN, RAAN, RBAN, RCAN, RABN, RBBN, RCBN, RDBN, REBN, RACN, RBCN, RAAE, RABE, RBBE, RCBE, RDBE, REBE, IABN, IBBN, ICBN, IABE, IBBE, ICBE, /* JF Ratt Roads, standardised */
+
+	RABS, RACS, /* Future Road Set */
 }
 
 item(FEAT_ROADTYPES, item_country_asphalt_road2, 00) {
 	property {
 		label:                       "ROAD";
-		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24", "ACLK", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD", "AR21", "ELA1", "AR22", "ELA2", "AR24", "ELA0", "ALA0", "ASP0", "FUEL", "ASP1", "ASP2", "SAND", "COBB", "COB2", "COB3", "COB4", "BEAC", "HWAY", "DIRT", "SETT", "ISR1", "ISR2", "AUZ1", "AUZ2", "AUZ3", "AUZ4", "AUZ5", "AUZ6", "AUZ7", "AUZ8", "AUZ9", "AUZ0", "AUZA", "AUZB", "AUZC", "AUZD", "AUZE", "AUZF", "AUZG", "AUZH", "FWAY", "AUZI", "AUZJ", "AUZK", "AUZL", "AUZM", "AUZY", "AUZZ", "YARD", "COAL", "HAUL",	"OFFR",	"ORD0",	"ORD1",	"ORD2",	"ORD3",	"ORD4",	"SRD0",	"SRD1",	"SRD2",	"ARD0",	"ARD1",	"AER0",	"ARD2",	"ARD3",	"AER1",	"ARD4",	"ARD5",	"AER2",	"WRD0",	"WRD1",	"URD0",	"URD1",	"UER1",	"IRD0",	"IRD1", "BIKE", "BRIC", "NL30", "NL50", "NL5F", "NL60", "NL80", "NL10", "NL12", "RAAS", "RABS", "RACS", "SMRT", "SMTS", "pABP", "pABS", "PIPE", "EgBi", "Gg8r"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24", "ACLK", "AR11", "AR12", "AR13", "AR14", "AR21", "AR22", "AR23", "AR24", "AR31", "AR32", "AR33", "AR34", "ELSP", "ALSP", "ELRD", "AR21", "ELA1", "AR22", "ELA2", "AR24", "ELA0", "ALA0", "ASP0", "FUEL", "ASP1", "ASP2", "SAND", "COBB", "COB2", "COB3", "COB4", "BEAC", "HWAY", "DIRT", "SETT", "ISR1", "ISR2", "AUZ1", "AUZ2", "AUZ3", "AUZ4", "AUZ5", "AUZ6", "AUZ7", "AUZ8", "AUZ9", "AUZ0", "AUZA", "AUZB", "AUZC", "AUZD", "AUZE", "AUZF", "AUZG", "AUZH", "FWAY", "AUZI", "AUZJ", "AUZK", "AUZL", "AUZM", "AUZY", "AUZZ", "YARD", "COAL", "HAUL",	"OFFR",	"ORD0",	"ORD1",	"ORD2",	"ORD3",	"ORD4",	"SRD0",	"SRD1",	"SRD2",	"ARD0",	"ARD1",	"AER0",	"ARD2",	"ARD3",	"AER1",	"ARD4",	"ARD5",	"AER2",	"WRD0",	"WRD1",	"URD0",	"URD1",	"UER1",	"IRD0",	"IRD1", "BIKE", "BRIC", "NL30", "NL50", "NL5F", "NL60", "NL80", "NL10", "NL12", "RAAS", "RABS", "RACS", "SMRT", "SMTS", "pABP", "pABS", "PIPE"];
+		alternative_roadtype_list: ["RABN"];
 		roadtype_flags:				 bitmask(ROADTYPE_FLAG_HIDDEN);
 }
 }
@@ -663,7 +666,7 @@ item(FEAT_ROADTYPES, item_farm_tracks, 01) {
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
 		powered_roadtype_list:       ["ROAD", "OLD_", "RAaN", "RBaN", "RAAN", "RBAN", "RCAN", "RAAE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
-		alternative_roadtype_list:   ["ROAD"
+		alternative_roadtype_list:   ["ROAD", "RABN"];
 		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES): bitmask();
 		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
