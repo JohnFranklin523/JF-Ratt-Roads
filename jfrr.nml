@@ -3065,7 +3065,7 @@ item(FEAT_ROADTYPES, item_old_town_road, 25) {
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "SETT", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0", "ELA0"];
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD, ROADTYPE_FLAG_HIDDEN);
 //		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 //		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24
