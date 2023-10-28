@@ -88,8 +88,8 @@ STR_PARAM_20_DESC              :Change the speed limits for Industrial Road 2 in
 STR_PARAM_21_NAME              :Speed Limits for Industrial Road 3 (km/h)
 STR_PARAM_21_DESC              :Change the speed limits for Industrial Road 3 in km/h. Max: 255 km/h. 0 km/h means no limits. Default: 80. This does not affect costs and availabilities to houses.
 
-STR_PARAM_21_NAME              :Speed Limits for Old Town Road (km/h)
-STR_PARAM_21_DESC              :Change the speed limits for Old Town Road in km/h. This is a hidden roadtype that only appears on earlier starting dates. Max: 255 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
+STR_PARAM_22_NAME              :Speed Limits for Old Town Road (km/h)
+STR_PARAM_22_DESC              :Change the speed limits for Old Town Road in km/h. This is a hidden roadtype that only appears on earlier starting dates. Max: 255 km/h. 0 km/h means no limits. Default: 40. This does not affect costs and availabilities to houses.
 
 STR_NO_LIMITS                  :No Speed Limits
 
