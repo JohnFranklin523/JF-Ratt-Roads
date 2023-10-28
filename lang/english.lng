@@ -2,7 +2,7 @@
 
 #Above is the English US id
 
-STR_GRF_NAME             :JFRattRoads 1.2.1 Sett Cobblestone Texture
+STR_GRF_NAME             :JFRattRoads 1.2.1
 STR_GRF_DESC             :{}11 October 2023: v1.2.1 Released! Fix bugs on roadtype labels and speed limits. NOT COMPATIBLE WITH ANY PREVIOUS VERSIONS INCLUDING 1.2!!!{}5 October 2023: v1.2 Released! Adding standardised roadtype labels. NOT COMPATIBLE WITH PREVIOUS VERSIONS.{}13 April 2023: v1.1 released, adding custom speed limits and fixing some graphical errors. 3 Feb 2023: v1.0 released! Not Compatible with previous versions. 1 Feb 2023: Change configures and road names; add Chinese (Simplified) translations, making it the first official-released road set supporting Chinese language. 4 Dec 2022: Add "m/s" option by John Franklin. 8th Jun 2021: Bitumen and Concrete Roads some with Fences (snow aware) roads from Australia, Europe and America.{}{YELLOW}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2023 John Franklin, GarryG and Andrew350{ORANGE}{}Licensed under GPLv2
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?t=90566
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
