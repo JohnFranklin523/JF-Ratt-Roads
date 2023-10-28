@@ -202,16 +202,16 @@ STR_industrial3_ROAD_ELECTRIFIED_MENU	    :Electric Industrial Road 3 (No Houses
 
 STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
 STR_TRAM_AUTOREPLACE               :Tram Vehicles
-STR_TRAM_NEW_ENGINE                :tram
+STR_TRAM_NEW_ENGINE                :Tram
 
 STR_TRAM_TRACK_NAME                :Tramway
 STR_TRAM_TRACK_TOOLBAR             :Tramway Construction
-STR_TRAM_TRACK_MENU                :Tramway construction
+STR_TRAM_TRACK_MENU                :Tramway Construction
 
 STR_ELECTRIC_TRAM_TRACK_NAME       :Electric Tramway
 STR_ELECTRIC_TRAM_TRACK_TOOLBAR    :Electric Tramway Construction
-STR_ELECTRIC_TRAM_TRACK_MENU       :Electric Tramway construction
+STR_ELECTRIC_TRAM_TRACK_MENU       :Electric Tramway Construction
 
 STR_OLD_TOWN_ROAD_NAME               :Old Town Road
 STR_OLD_TOWN_ROAD_TOOLBAR            :Old Town Road Construction
-STR_OLD_TOWN_ROAD_MENU               :Old Town Road construction
+STR_OLD_TOWN_ROAD_MENU               :Old Town Road Construction
