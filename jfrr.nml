@@ -10,7 +10,7 @@ grf {
 		name: string(STR_GRF_NAME);
 		desc: string(STR_GRF_DESC);
 		url : string(STR_GRF_URL);
-		version: 9;
+		version: 10;
 		min_compatible_version: 9;
 		param 0 {
 			param_standardisation {
@@ -296,6 +296,19 @@ grf {
 				min_value: 0;
 				max_value: 255;
 				def_value: 81;
+				names: {
+					0: string(STR_NO_LIMITS);
+				};
+			}
+		}
+		param 22 {
+			param_old_town_road {
+				type:		int;
+				name:		string(STR_PARAM_22_NAME);
+				desc:		string(STR_PARAM_22_DESC);
+				min_value: 0;
+				max_value: 255;
+				def_value: 40;
 				names: {
 					0: string(STR_NO_LIMITS);
 				};
@@ -1457,11 +1470,11 @@ switch (FEAT_ROADTYPES, SELF, switch_town_gui_style_check, param_road_style) {
 	spriteset_town_gui;
 }
 switch (FEAT_ROADTYPES, SELF, switch_town_bridge_overlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_town_road_bridge_overlay;
+	TILETYPE_SNOW: spriteset_town_road_bridge_overlay_snow;
 	spriteset_town_road_bridge_overlay;
 }
 switch (FEAT_ROADTYPES, SELF, switch_town_bridge_overlay_american_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_town_road_bridge_overlay_american;
+	TILETYPE_SNOW: spriteset_town_road_bridge_overlay_american_snow;
 	spriteset_town_road_bridge_overlay_american;
 }
 switch (FEAT_ROADTYPES, SELF, switch_town_bridge_overlay_style_check, param_road_style) {
@@ -2409,6 +2422,120 @@ item(FEAT_ROADTYPES, item_industrial3_road, 23) {
 
 
 
+//==================================
+//=========Old Town Road============
+//==================================
+
+spriteset (spriteset_old_town_road_underlay, "gfx/dirt_new.png") {
+	template_roads_main_new(1, 1)
+}
+spriteset (spriteset_old_town_road_underlay_snow, "gfx/dirt_new_snow.png") {
+	template_roads_main_new(1, 1)
+}
+spriteset (spriteset_old_town_road_underlay_sand, "gfx/dirt_new_sand.png") {
+	template_roads_main_new(1, 1)
+}
+spriteset (spriteset_old_town_road_city, "gfx/sett_pavement.png") {
+	template_roads_main_new(1, 226)
+}
+spriteset (spriteset_old_town_road_bridge_overlay, "gfx/sett_pavement.png") {
+	template_road_bridge_overlay(1, 37)
+}
+spriteset (spriteset_old_town_road_bridge_overlay_snow, "gfx/sett_pavement_snow.png") {
+	template_road_bridge_overlay(1, 37)
+}
+spriteset (spriteset_old_town_road_tunnels_city, "gfx/sett_pavement.png") {
+	template_road_tunnels(1, 81)
+}
+spriteset (spriteset_old_town_road_tunnels_dirt, "gfx/dirt_new.png") {
+	template_road_tunnels(1, 81)
+}
+spriteset (spriteset_old_town_road_tunnels_snow, "gfx/dirt_new_snow.png") {
+	template_road_tunnels(1, 81)
+}
+spriteset (spriteset_old_town_road_tunnels_sand, "gfx/dirt_new_sand.png") {
+	template_road_tunnels(1, 81)
+}
+spriteset (spriteset_old_town_road_gui, "gfx/dirt_new.png") {
+	template_roads_gui(1, 153)
+}
+spriteset (spriteset_old_town_road_stops, "gfx/dirt_new.png") {
+	template_road_stops(1, 117)
+}
+spriteset (spriteset_old_town_road_stops_snow, "gfx/dirt_new_snow.png") {
+	template_road_stops(1, 117)
+}
+spriteset (spriteset_old_town_road_stops_sand, "gfx/dirt_new_sand.png") {
+	template_road_stops(1, 117)
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_stops_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_old_town_road_stops_snow;
+	TILETYPE_DESERT: spriteset_old_town_road_stops_sand;
+	spriteset_old_town_road_stops;
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_tunnels_town_zone, town_zone) {
+	TOWNZONE_CENTRE: spriteset_old_town_road_tunnels_city;
+	TOWNZONE_INNER_SUBURB: spriteset_old_town_road_tunnels_city;
+	TOWNZONE_OUTER_SUBURB: spriteset_old_town_road_tunnels_city;
+	TOWNZONE_OUTSKIRT: spriteset_old_town_road_tunnels_city;
+	spriteset_old_town_road_tunnels_dirt;
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_tunnels_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_old_town_road_tunnels_snow;
+	TILETYPE_DESERT: spriteset_old_town_road_tunnels_sand;
+	switch_old_town_road_tunnels_town_zone;
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_bridge_surface_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_old_town_road_bridge_overlay_snow;
+	spriteset_old_town_road_bridge_overlay;
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_town_zone, town_zone) {
+	TOWNZONE_CENTRE: spriteset_old_town_road_city;
+	TOWNZONE_INNER_SUBURB: spriteset_old_town_road_city;
+	TOWNZONE_OUTER_SUBURB: spriteset_old_town_road_city;
+	TOWNZONE_OUTSKIRT: spriteset_old_town_road_city;
+	spriteset_old_town_road_underlay;
+}
+switch (FEAT_ROADTYPES, SELF, switch_old_town_road_underlay_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_old_town_road_underlay_snow;
+	TILETYPE_DESERT: spriteset_old_town_road_underlay_sand;
+	switch_old_town_road_town_zone;
+}
+
+item(FEAT_ROADTYPES, item_old_town_road, 24) {
+	property {
+		label:                       "OLD_";
+		introduction_date:           0;
+		name:                        string(STR_OLD_TOWN_ROAD_NAME);
+		toolbar_caption:             string(STR_OLD_TOWN_ROAD_TOOLBAR);
+		menu_text:                   string(STR_OLD_TOWN_ROAD_MENU);
+		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
+		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
+		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
+		powered_roadtype_list:       ["ROAD", "OLD_", "RAAN", "RBAN", "RCAN", "RABN", "RBBN", "RCBN", "RDBN", "REBN", "RACN", "RBCN", "RAAE", "RABE", "RBBE", "RCBE", "RDBE", "REBE", "IABN", "IBBN", "ICBN", "IABE", "IBBE", "ICBE", "JF01", "JF02", "JF03", "JF04", "JF05", "JF06", "JF07", "JF08", "JF09", "JF10", "JF11", "JF12", "JF13", "JF14", "JF15", "JF16", "JF17", "JF18", "JF19", "JF20", "JF21", "JF22", "JF23", "JF24"];
+		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD, ROADTYPE_FLAG_HIDDEN);
+//		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
+//		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24
+		speed_limit:                 param[22] km/h;
+//		sort_order:                  00;
+//		map_colour:                  ?;
+//		requires_roadtype_list:      ?;
+//		introduces_roadtype_list:    ?;
+//		alternative_roadtype_list:   ?;
+	}
+	graphics {
+		gui:						 spriteset_old_town_road_gui;
+		underlay:                    switch_old_town_road_underlay_terrain_check;
+		roadstops:                   switch_old_town_road_stops_terrain_check;
+//		track_overlay:               spriteset_old_town_road_overlay;
+		bridge_surfaces:             switch_old_town_road_bridge_surface_terrain_check;
+		tunnels:                     switch_old_town_road_tunnels_terrain_check;
+//		tunnel_overlay:              spriteset_old_town_road_tunnel_overlay;
+	}
+}
+
+
+
 //===========================
 //Begin electrified roadtypes
 //===========================
@@ -2843,19 +2970,19 @@ item(FEAT_ROADTYPES, item_industrial2_road_electrified, 22) {
 Industrial_A-Level_ROAD_ELECTRIFIED
 **************************************/
 if (param[0]) {
-	item (FEAT_ROADTYPES, item_industrial3_road_electrified, 24) {
+	item (FEAT_ROADTYPES, item_industrial3_road_electrified, 25) {
 		property {
 			label:					"ICBE";
 		}
 	}
 } else {
-	item (FEAT_ROADTYPES, item_industrial3_road_electrified, 24) {
+	item (FEAT_ROADTYPES, item_industrial3_road_electrified, 25) {
 		property {
 			label:					"JF24";
 		}
 	}
 }
-item(FEAT_ROADTYPES, item_industrial3_road_electrified, 24) {
+item(FEAT_ROADTYPES, item_industrial3_road_electrified, 25) {
 	property {
 		introduction_date:           (param_intro_year == 0) ? date(1955,01,01) : 0;
 		name:                        string(STR_industrial3_ROAD_ELECTRIFIED_NAME);
@@ -2964,6 +3091,7 @@ item(FEAT_TRAMTYPES, item_electric_tramtrack, 36) {
 //		tunnel_overlay:              spriteset_avenue_tunnel_overlay;
 	}*/
 }
+
 
 
 //==================================
