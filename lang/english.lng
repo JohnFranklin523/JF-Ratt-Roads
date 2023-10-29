@@ -97,7 +97,7 @@ STR_DISABLE                    :Disable
 
 STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
 STR_GENERIC_AUTOREPLACE              :Road Vehicles
-STR_GENERIC_NEW_ENGINE               :Road
+STR_GENERIC_NEW_ENGINE               :road
 
 STR_farm_tracks_NAME	    	:Farm Tracks (No Houses)
 STR_farm_tracks_TOOLBAR        :Farm Tracks (No Houses)
@@ -202,7 +202,7 @@ STR_industrial3_ROAD_ELECTRIFIED_MENU	    :Electric Industrial Road 3 (No Houses
 
 STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
 STR_TRAM_AUTOREPLACE               :Tram Vehicles
-STR_TRAM_NEW_ENGINE                :Tram
+STR_TRAM_NEW_ENGINE                :tram
 
 STR_TRAM_TRACK_NAME                :Tramway
 STR_TRAM_TRACK_TOOLBAR             :Tramway Construction
