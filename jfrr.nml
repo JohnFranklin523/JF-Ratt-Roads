@@ -548,7 +548,7 @@ roadtypetable { ROAD, /* Default */
 	RAaN, RBaN, RAAN, RBAN, RCAN, RABN, RBBN, RCBN, RDBN, REBN, RACN, RBCN, RAAE, RABE, RBBE, RCBE, RDBE, REBE, IABN, IBBN, ICBN, IABE, IBBE, ICBE, /* JF Ratt Roads, standardised */
 
 	RABS, RACS, /* Future Road Set */
-	//EABN, EAbi, EAgi, /* Utility Tramtypes */
+	pABN, pABE, /* Utility Roadtypes */
 }
 
 item(FEAT_ROADTYPES, item_country_asphalt_road2, 00) {
