@@ -515,9 +515,9 @@ template tmpl_depot2() {
 roadtypetable { ROAD, /* Default */
 	//OFFR, SAND, /* country roads */
 	//WWAY, FORD, FRZN, IWAY, /* water ways */
-	//HAUL, /* hauling road */
+	HAUL, /* hauling road */
 	//DIRT, GRAV, ASPT, HWAY, /* unspooled */
-	//OLD_, SETT, ASP0, ASP1, ASP2, /* ratt */
+	OLD_, //SETT, ASP0, ASP1, ASP2, /* ratt */
 	//AUZB, AUZC, AUZD, BEAC, COBB, COB2, COB3, ACLK, AR12, AR11, AR13, AR14, /* Auz Road Sets Pt.1 */
 	//AUZF, AUZG, AUZM, AUZH, FWAY, AUZI, AUZJ, AR21, AR22, AR23, AR24, /* Auz Road Sets Pt.2 */
 	//AUZK, AUZL, YARD, COAL, FUEL, AUZY, ISR1, AR31, AR32, AR34, /* Auz Road Set Pt.3 */
@@ -535,6 +535,7 @@ roadtypetable { ROAD, /* Default */
 	RAaN, RBaN, RAAN, RBAN, RCAN, RABN, RBBN, RCBN, RDBN, REBN, RACN, RBCN, RAAE, RABE, RBBE, RCBE, RDBE, REBE, IABN, IBBN, ICBN, IABE, IBBE, ICBE, /* JF Ratt Roads, standardised */
 
 	RABS, RACS, /* Future Road Set */
+	//EABN, EAbi, EAgi, /* Utility Tramtypes */
 }
 
 item(FEAT_ROADTYPES, item_country_asphalt_road2, 00) {
